@@ -70,7 +70,6 @@
           },
           "style": "diamond",
           "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
-          "trailing_diamond": "\ue0b4",
           "type": "node"
         },
         {
@@ -79,7 +78,6 @@
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
-          "trailing_diamond": "\ue0b4",
           "type": "go"
         },
         {
@@ -88,7 +86,6 @@
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
-          "trailing_diamond": "\ue0b4",
           "type": "python"
         },
         {
@@ -101,7 +98,6 @@
           },
           "style": "diamond",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
-          "trailing_diamond": "\ue0b4",
           "type": "ruby"
         },
         {
@@ -116,7 +112,6 @@
           },
           "style": "diamond",
           "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
-          "trailing_diamond": "\ue0b4",
           "type": "aws"
         },
         {
@@ -125,7 +120,6 @@
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ .FormattedMs }} \uf252 ",
-          "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         },
         {
@@ -140,7 +134,6 @@
           },
           "style": "diamond",
           "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
-          "trailing_diamond": "\ue0b4",
           "type": "exit"
         },
         {
