@@ -123,20 +123,6 @@
           "type": "executiontime"
         },
         {
-          "background": "darkGray",
-          "background_templates": [
-            "{{ if gt .Code 0 }}lightRed{{ end }}"
-          ],
-          "foreground": "lightWhite",
-          "leading_diamond": "\ue0b6",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "diamond",
-          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
-          "type": "exit"
-        },
-        {
           "background": "lightWhite",
           "foreground": "black",
           "leading_diamond": "\ue0b6",
