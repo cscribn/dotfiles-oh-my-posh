@@ -33,7 +33,7 @@
             "style": "full"
           },
           "style": "powerline",
-          "template": " {{ .Path }} ",
+          "template": " \uf07c {{ .Path }} ",
           "type": "path"
         },
         {
@@ -70,7 +70,7 @@
             "fetch_version": true
           },
           "style": "diamond",
-          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
+          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} <transparent>\ue0b6</> ",
           "type": "node"
         },
         {
@@ -98,7 +98,7 @@
             "fetch_version": true
           },
           "style": "diamond",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
           "type": "ruby"
         },
         {
@@ -112,7 +112,7 @@
             "display_default": false
           },
           "style": "diamond",
-          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
+          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} <transparent>\ue0b6</> ",
           "type": "aws"
         },
         {
@@ -120,7 +120,7 @@
           "foreground": "black",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": " {{ .FormattedMs }} \uf252 ",
+          "template": " {{ .FormattedMs }} <transparent>\ue0b6</>",
           "type": "executiontime"
         },
         {
@@ -131,7 +131,7 @@
             "time_format": "3:04 PM"
           },
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b4",
           "type": "time"
         }
