@@ -17,6 +17,7 @@
           "foreground": "lightWhite",
           "powerline_symbol": "\ue0b0",
           "properties": {
+            "folder_separator_icon": "|",
             "home_icon": "~",
             "style": "full"
           },
