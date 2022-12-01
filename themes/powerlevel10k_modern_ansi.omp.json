@@ -29,7 +29,6 @@
           "foreground": "lightWhite",
           "powerline_symbol": "\ue0b4",
           "properties": {
-            "folder_separator_icon": "|",
             "style": "full"
           },
           "style": "powerline",
