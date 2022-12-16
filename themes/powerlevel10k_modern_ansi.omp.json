@@ -69,7 +69,7 @@
             "fetch_version": true
           },
           "style": "diamond",
-          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} <transparent>\ue0b6</> ",
+          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} <transparent>\ue0b6</>",
           "type": "node"
         },
         {
@@ -111,7 +111,7 @@
             "display_default": false
           },
           "style": "diamond",
-          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} <transparent>\ue0b6</> ",
+          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} <transparent>\ue0b6</>",
           "type": "aws"
         },
         {
