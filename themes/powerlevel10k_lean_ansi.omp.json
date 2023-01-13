@@ -65,10 +65,10 @@
         {
           "foreground": "lightBlue",
           "properties": {
-            "display_version": true,
-            "postfix": " \uE77F "
+            "display_version": true
           },
           "style": "plain",
+          "template": " \uE77F ",
           "type": "dotnet"
         },
         {

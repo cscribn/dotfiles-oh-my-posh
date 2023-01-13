@@ -85,10 +85,10 @@
           "foreground": "black",
           "leading_diamond": "\ue0b6",
           "properties": {
-            "display_version": true,
-            "postfix": " \uE77F "
+            "display_version": true
           },
           "style": "diamond",
+          "postfix": " \uE77F ",
           "type": "dotnet"
         },
         {

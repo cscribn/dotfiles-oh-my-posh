@@ -80,10 +80,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "display_version": true,
-            "postfix": " \uE77F "
+            "display_version": true
           },
           "style": "powerline",
+          "template": " \uE77F ",
           "type": "dotnet"
         },
         {
