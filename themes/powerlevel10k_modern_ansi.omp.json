@@ -81,6 +81,17 @@
           "type": "go"
         },
         {
+          "background": "lightBlue",
+          "foreground": "black",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "display_version": true,
+            "postfix": " \uE77F "
+          },
+          "style": "diamond",
+          "type": "dotnet"
+        },
+        {
           "background": "lightYellow",
           "foreground": "black",
           "leading_diamond": "\ue0b6",

@@ -80,11 +80,11 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "fetch_version": true
+            "display_version": true,
+            "postfix": " \uE77F "
           },
           "style": "powerline",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue624 ",
-          "type": "julia"
+          "type": "dotnet"
         },
         {
           "background": "lightYellow",
