@@ -150,7 +150,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\u276f ",
+          "template": "{{ if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff04{{ else }}\uff05{{ end }} ",
           "type": "exit"
         }
       ],
