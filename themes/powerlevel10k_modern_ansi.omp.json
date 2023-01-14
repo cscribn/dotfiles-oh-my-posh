@@ -128,6 +128,20 @@
           "type": "executiontime"
         },
         {
+          "background": "darkGray",
+          "background_templates": [
+            "{{ if gt .Code 0 }}lightRed{{ end }}"
+          ],
+          "foreground": "lightWhite",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
+          "type": "exit"
+        },
+        {
           "background": "lightWhite",
           "foreground": "black",
           "leading_diamond": "\ue0b6",
@@ -148,15 +162,9 @@
       "segments": [
         {
           "foreground": "lightYellow",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#FF5252{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": true
-          },
           "style": "plain",
           "template": "{{ if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
-          "type": "exit"
+          "type": "text"
         }
       ],
       "type": "prompt"
