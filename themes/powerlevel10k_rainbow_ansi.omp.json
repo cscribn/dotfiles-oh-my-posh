@@ -110,19 +110,6 @@
           "type": "ruby"
         },
         {
-          "background": "lightYellow",
-          "foreground": "black",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": false
-          },
-          "style": "powerline",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7",
-          "type": "azfunc"
-        },
-        {
           "background_templates": [
             "{{if contains \"default\" .Profile}}lightYellow{{end}}",
             "{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
@@ -143,7 +130,6 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
-          "template": " \uf0ad ",
           "type": "root"
         },
         {
@@ -152,7 +138,7 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
-          "template": " {{ .FormattedMs }} \uf252 ",
+          "template": " {{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
@@ -178,7 +164,7 @@
           },
           "invert_powerline": true,
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b0",
           "type": "time"
         }

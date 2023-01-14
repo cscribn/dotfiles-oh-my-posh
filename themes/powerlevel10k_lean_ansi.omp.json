@@ -90,16 +90,6 @@
           "type": "ruby"
         },
         {
-          "foreground": "lightYellow",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": false
-          },
-          "style": "plain",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7",
-          "type": "azfunc"
-        },
-        {
           "foreground_templates": [
             "{{if contains \"default\" .Profile}}lightYellow{{end}}",
             "{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
@@ -115,7 +105,6 @@
         {
           "foreground": "lightYellow",
           "style": "plain",
-          "template": " \uf0ad ",
           "type": "root"
         },
         {
@@ -142,7 +131,7 @@
             "time_format": "3:04 PM"
           },
           "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
           "type": "time"
         }
       ],
