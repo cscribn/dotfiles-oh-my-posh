@@ -76,7 +76,7 @@
             "fetch_version": true
           },
           "style": "diamond",
-          "template": " \uE77F {{ .Full }} ",
+          "template": " \uE77F {{ .Full }} <transparent>\ue0b6</>",
           "type": "dotnet"
         },
         {
@@ -113,10 +113,11 @@
           "type": "aws"
         },
         {
-          "background": "lightBlue",
-          "foreground": "lightWhite",
+          "background": "lightYellow",
+          "foreground": "black",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
+          "template": " \uF0E7 <transparent>\ue0b6</>",
           "type": "root"
         },
         {
@@ -138,7 +139,7 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
+          "template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} <transparent>\ue0b6</>",
           "type": "exit"
         },
         {
