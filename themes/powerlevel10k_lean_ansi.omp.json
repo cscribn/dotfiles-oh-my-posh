@@ -14,10 +14,9 @@
           "foreground": "lightBlue",
           "properties": {
             "home_icon": "~",
-            "style": "full"
+            "style": "agnoster_short"
           },
           "style": "plain",
-          "template": " \uf07c {{ .Path }} ",
           "type": "path"
         },
         {

@@ -18,10 +18,9 @@
           "foreground": "lightWhite",
           "powerline_symbol": "\ue0b4",
           "properties": {
-            "style": "full"
+            "style": "agnoster_short"
           },
           "style": "powerline",
-          "template": " \uf0e7 ",
           "type": "root"
         },
         {
