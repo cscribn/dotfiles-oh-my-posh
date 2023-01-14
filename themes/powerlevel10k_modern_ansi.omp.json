@@ -73,10 +73,10 @@
           "foreground": "black",
           "leading_diamond": "\ue0b6",
           "properties": {
-            "display_version": true
+            "fetch_version": true
           },
           "style": "diamond",
-          "postfix": " \uE77F ",
+          "template": " \uE77F {{ .Full }} ",
           "type": "dotnet"
         },
         {

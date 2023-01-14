@@ -78,10 +78,10 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "display_version": true
+            "fetch_version": true
           },
           "style": "powerline",
-          "template": " \uE77F ",
+          "template": " \uE77F {{ .Full }} ",
           "type": "dotnet"
         },
         {
