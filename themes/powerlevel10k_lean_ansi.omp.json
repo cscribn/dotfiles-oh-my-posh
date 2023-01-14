@@ -83,7 +83,6 @@
         {
           "foreground": "lightRed",
           "properties": {
-            "display_mode": "files",
             "fetch_version": true
           },
           "style": "plain",

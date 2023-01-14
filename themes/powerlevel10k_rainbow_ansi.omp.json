@@ -103,7 +103,6 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
-            "display_mode": "files",
             "fetch_version": true
           },
           "style": "powerline",

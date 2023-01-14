@@ -92,7 +92,6 @@
           "foreground": "lightWhite",
           "leading_diamond": "\ue0b6",
           "properties": {
-            "display_mode": "files",
             "fetch_version": true
           },
           "style": "diamond",
