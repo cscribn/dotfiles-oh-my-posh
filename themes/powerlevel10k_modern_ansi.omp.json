@@ -21,17 +21,6 @@
             "style": "agnoster_short"
           },
           "style": "powerline",
-          "type": "root"
-        },
-        {
-          "background": "lightBlue",
-          "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b4",
-          "properties": {
-            "style": "full"
-          },
-          "style": "powerline",
-          "template": " \uf07c {{ .Path }} ",
           "type": "path"
         },
         {
@@ -123,6 +112,14 @@
           "style": "diamond",
           "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} <transparent>\ue0b6</>",
           "type": "aws"
+        },
+        {
+          "background": "lightBlue",
+          "foreground": "lightWhite",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \uf0ad ",
+          "type": "root"
         },
         {
           "background": "lightYellow",
