@@ -70,7 +70,7 @@
         },
         {
           "background": "lightBlue",
-          "foreground": "black",
+          "foreground": "lightWhite",
           "leading_diamond": "\ue0b6",
           "properties": {
             "fetch_version": true
