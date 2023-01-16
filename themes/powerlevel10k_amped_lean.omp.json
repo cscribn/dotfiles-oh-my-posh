@@ -14,7 +14,7 @@
           "foreground": "lightBlue",
           "properties": {
             "folder_separator_template": "{{ if or (eq .Shell \"bash\") (eq .Shell \"zsh\") }}/{{end}}",
-            "style": "agnoster_short"
+            "style": "agnoster_left"
           },
           "style": "plain",
           "type": "path"

@@ -19,7 +19,7 @@
           "powerline_symbol": "\ue0b4",
           "properties": {
 			"folder_separator_template": "{{ if or (eq .Shell \"bash\") (eq .Shell \"zsh\") }}/{{end}}",
-            "style": "agnoster_short"
+            "style": "agnoster_left"
           },
           "style": "powerline",
           "type": "path"
