@@ -165,7 +165,7 @@
           },
           "invert_powerline": true,
           "style": "diamond",
-          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b0",
           "type": "time"
         }
