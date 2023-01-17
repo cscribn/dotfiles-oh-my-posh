@@ -1,13 +1,16 @@
 # config-oh-my-posh
 
-## themes/powerlevel10k_amped_lean.omp.json
+## themes/\*\_amped\_\*.omp.json
 
-A Powerlevel10k Lean Oh My Posh theme that uses ANSI colors. Allows your prompt to take on the colors of your terminal profile. Supports dotnet instead of julia.
+Amped up themes with the following improvements:
 
-## themes/powerlevel10k_amped_modern.omp.json
-
-A Powerlevel10k Modern Oh My Posh theme that uses ANSI colors. Allows your prompt to take on the colors of your terminal profile. Supports dotnet instead of julia.
-
-## themes/powerlevel10k_amped_rainbow.omp.json
-
-A Powerlevel10k Rainbow Oh My Posh theme that uses ANSI colors. Allows your prompt to take on the colors of your terminal profile. Supports dotnet instead of julia.
+* HEX color codes replaced with ANSI ones
+  * Let your terminal colors shine through
+* Agnoster short paths instead of full
+* Correct slashes when using Git Bash for Windows
+* Julia replaced with dotnet
+* Azfunc removed
+* US time format
+* Prompts that match the shell used
+  * \> for pwsh; % for zsh; $ otherwise
+* Other minor formatting
