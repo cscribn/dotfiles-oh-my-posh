@@ -146,7 +146,6 @@
         {
           "background": "lightWhite",
           "foreground": "black",
-          "leading_diamond": "\ue0b6",
           "properties": {
             "time_format": "3:04 PM"
           },
