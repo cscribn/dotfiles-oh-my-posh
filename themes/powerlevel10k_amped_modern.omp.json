@@ -10,7 +10,6 @@
 					"leading_diamond": "\ue0b6",
 					"style": "diamond",
 					"template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
-					"trailing_diamond": "\ue0b4",
 					"type": "os"
 				},
 				{
@@ -54,20 +53,25 @@
 				{
 					"background": "lightGreen",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
 					"properties": {
 						"fetch_version": true
 					},
-					"style": "diamond",
-					"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} <transparent>\ue0b6</>",
+					"style": "powerline",
+					"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
 					"type": "node"
 				},
 				{
 					"background": "lightCyan",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
-					"style": "diamond",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
+					"properties": {
+						"fetch_version": true
+					},
+					"style": "powerline",
+					"template": " \uE77F {{ .Full }} ",
 					"type": "go"
 				},
 				{
@@ -84,20 +88,25 @@
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
-					"style": "diamond",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
+					"properties": {
+						"display_mode": "files",
+						"fetch_virtual_env": false
+					},
+					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
 					"type": "python"
 				},
 				{
 					"background": "lightRed",
 					"foreground": "lightWhite",
-					"leading_diamond": "\ue0b6",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
 					"properties": {
 						"fetch_version": true
 					},
-					"style": "diamond",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} <transparent>\ue0b6</>",
+					"style": "powerline",
+					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
 					"type": "ruby"
 				},
 				{
@@ -106,28 +115,30 @@
 						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
 					],
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
 					"properties": {
 						"display_default": false
 					},
-					"style": "diamond",
-					"template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} <transparent>\ue0b6</>",
+					"style": "powerline",
+					"template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
 					"type": "aws"
 				},
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
-					"style": "diamond",
-					"template": " \uF0E7 <transparent>\ue0b6</>",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
+					"style": "powerline",
 					"type": "root"
 				},
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
-					"style": "diamond",
-					"template": " {{ .FormattedMs }} <transparent>\ue0b6</>",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
+					"style": "powerline",
+					"template": " {{ .FormattedMs }} ",
 					"type": "executiontime"
 				},
 				{
@@ -136,21 +147,22 @@
 						"{{ if gt .Code 0 }}lightRed{{ end }}"
 					],
 					"foreground": "lightWhite",
-					"leading_diamond": "\ue0b6",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
 					"properties": {
 						"always_enabled": true
 					},
-					"style": "diamond",
-					"template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} <transparent>\ue0b6</>",
+					"style": "powerline",
+					"template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
 					"type": "exit"
 				},
 				{
 					"background": "lightWhite",
 					"foreground": "black",
-					"leading_diamond": "\ue0b6",
 					"properties": {
 						"time_format": "3:04 PM"
 					},
+					"invert_powerline": true,
 					"style": "diamond",
 					"template": " {{ .CurrentDate | date .Format }} ",
 					"trailing_diamond": "\ue0b4",
