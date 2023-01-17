@@ -94,6 +94,7 @@
 						"display_mode": "files",
 						"fetch_virtual_env": false
 					},
+					"style": "diamond",
 					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
 					"type": "python"
 				},
