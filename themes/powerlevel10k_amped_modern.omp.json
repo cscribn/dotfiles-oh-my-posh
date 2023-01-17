@@ -71,18 +71,19 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " \uE77F {{ .Full }} ",
+					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
 					"type": "go"
 				},
 				{
 					"background": "lightBlue",
 					"foreground": "lightWhite",
-					"leading_diamond": "\ue0b6",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b6",
 					"properties": {
 						"fetch_version": true
 					},
-					"style": "diamond",
-					"template": " \uE77F {{ .Full }} <transparent>\ue0b6</>",
+					"style": "powerline",
+					"template": " \uE77F {{ .Full }} ",
 					"type": "dotnet"
 				},
 				{
@@ -94,7 +95,7 @@
 						"display_mode": "files",
 						"fetch_virtual_env": false
 					},
-					"style": "diamond",
+					"style": "powerline",
 					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
 					"type": "python"
 				},
