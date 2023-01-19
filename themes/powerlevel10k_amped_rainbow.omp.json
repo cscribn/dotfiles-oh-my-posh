@@ -22,6 +22,7 @@
 						"style": "agnoster_short"
 					},
 					"style": "powerline",
+					"template": " \uf07c {{ .Path }} ",
 					"type": "path"
 				},
 				{
@@ -59,7 +60,7 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
+					"template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
 					"type": "node"
 				},
 				{
@@ -71,7 +72,7 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
+					"template": " \ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "go"
 				},
 				{
@@ -96,7 +97,7 @@
 						"fetch_virtual_env": false
 					},
 					"style": "powerline",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
+					"template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "python"
 				},
 				{
@@ -108,7 +109,7 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
+					"template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "ruby"
 				},
 				{
@@ -123,7 +124,7 @@
 						"display_default": false
 					},
 					"style": "powerline",
-					"template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
+					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
 					"type": "aws"
 				},
 				{
@@ -140,7 +141,7 @@
 					"invert_powerline": true,
 					"powerline_symbol": "\ue0b2",
 					"style": "powerline",
-					"template": " {{ .FormattedMs }} \uf252 ",
+					"template": " \uf252 {{ .FormattedMs }} ",
 					"type": "executiontime"
 				},
 				{
@@ -166,7 +167,7 @@
 					},
 					"invert_powerline": true,
 					"style": "diamond",
-					"template": " {{ .CurrentDate | date .Format }} ",
+					"template": " \uf017 {{ .CurrentDate | date .Format }} ",
 					"trailing_diamond": "\ue0b0",
 					"type": "time"
 				}

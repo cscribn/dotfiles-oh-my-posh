@@ -18,6 +18,7 @@
 						"style": "agnoster_short"
 					},
 					"style": "plain",
+					"template": " \uf07c {{ .Path }} ",
 					"type": "path"
 				},
 				{
@@ -50,7 +51,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
+					"template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
 					"type": "node"
 				},
 				{
@@ -59,7 +60,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
+					"template": " \ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "go"
 				},
 				{
@@ -78,7 +79,7 @@
 						"fetch_virtual_env": false
 					},
 					"style": "plain",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
+					"template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "python"
 				},
 				{
@@ -87,7 +88,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
+					"template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "ruby"
 				},
 				{
@@ -100,7 +101,7 @@
 						"display_default": false
 					},
 					"style": "plain",
-					"template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
+					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
 					"type": "aws"
 				},
 				{
@@ -132,7 +133,7 @@
 						"time_format": "3:04 PM"
 					},
 					"style": "plain",
-					"template": " {{ .CurrentDate | date .Format }} ",
+					"template": " \uf017 {{ .CurrentDate | date .Format }} ",
 					"type": "time"
 				}
 			],
