@@ -112,7 +112,7 @@
 				{
 					"foreground": "lightYellow",
 					"style": "plain",
-					"template": " {{ .FormattedMs }} \uf252 ",
+					"template": " \uf252 {{ .FormattedMs }} ",
 					"type": "executiontime"
 				},
 				{
