@@ -22,7 +22,7 @@
 						"style": "agnoster_short"
 					},
 					"style": "powerline",
-					"template": " \uf07c {{ .Path }} ",
+					"template": " \uf07c  {{ .Path }} ",
 					"type": "path"
 				},
 				{
