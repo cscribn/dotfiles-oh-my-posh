@@ -5,8 +5,8 @@
 			"alignment": "left",
 			"segments": [
 				{
-					"background": "lightWhite",
-					"foreground": "black",
+					"background": "darkGray",
+					"foreground": "lightWhite",
 					"leading_diamond": "\ue0b6",
 					"style": "diamond",
 					"template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
@@ -160,8 +160,8 @@
 					"type": "exit"
 				},
 				{
-					"background": "lightWhite",
-					"foreground": "black",
+					"background": "lightMagenta",
+					"foreground": "lightWhite",
 					"properties": {
 						"time_format": "3:04 PM"
 					},
@@ -179,7 +179,7 @@
 			"newline": true,
 			"segments": [
 				{
-					"foreground": "lightYellow",
+					"foreground": "lightMagenta",
 					"style": "plain",
 					"template": "{{ if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
 					"type": "text"

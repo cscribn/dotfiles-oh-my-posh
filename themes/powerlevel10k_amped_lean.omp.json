@@ -96,7 +96,7 @@
 						"{{if contains \"default\" .Profile}}lightYellow{{end}}",
 						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
 					],
-					"foreground": "lightMagenta",
+					"foreground": "darkGray",
 					"properties": {
 						"display_default": false
 					},
@@ -128,7 +128,7 @@
 					"type": "exit"
 				},
 				{
-					"foreground": "lightCyan",
+					"foreground": "lightMagenta",
 					"properties": {
 						"time_format": "3:04 PM"
 					},
@@ -144,7 +144,7 @@
 			"newline": true,
 			"segments": [
 				{
-					"foreground": "lightGreen",
+					"foreground": "lightMagenta",
 					"style": "plain",
 					"template": "{{ if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
 					"type": "text"
