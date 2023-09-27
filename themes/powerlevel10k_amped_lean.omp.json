@@ -146,7 +146,7 @@
 				{
 					"foreground": "lightMagenta",
 					"style": "plain",
-					"template": "{{ if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
+					"template": "{{ if eq .Shell \"cmd\" }}\u005C{{ else if eq .Shell \"pwsh\" }}\u276f{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
 					"type": "text"
 				}
 			],
