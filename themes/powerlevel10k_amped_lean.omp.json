@@ -124,8 +124,8 @@
 						"always_enabled": true
 					},
 					"style": "plain",
-					"template": " {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
-					"type": "exit"
+					"template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}\u2714{{ end }} ",
+					"type": "status"
 				},
 				{
 					"foreground": "lightMagenta",
