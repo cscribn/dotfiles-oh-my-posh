@@ -7,8 +7,8 @@
 				{
 					"background": "darkGray",
 					"foreground": "lightWhite",
-					"leading_diamond": "\ue0ba",
-					"style": "diamond",
+					"powerline_symbol": "\ue0bc",
+					"style": "powerline",
 					"template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
 					"type": "os"
 				},
@@ -54,8 +54,7 @@
 				{
 					"background": "lightGreen",
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"fetch_version": true
 					},
@@ -66,8 +65,7 @@
 				{
 					"background": "lightCyan",
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"fetch_version": true
 					},
@@ -78,8 +76,7 @@
 				{
 					"background": "lightBlue",
 					"foreground": "lightWhite",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"fetch_version": true
 					},
@@ -90,8 +87,7 @@
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"display_mode": "files",
 						"fetch_virtual_env": false
@@ -103,8 +99,7 @@
 				{
 					"background": "lightRed",
 					"foreground": "lightWhite",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"fetch_version": true
 					},
@@ -118,8 +113,7 @@
 						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
 					],
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"display_default": false
 					},
@@ -130,16 +124,14 @@
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"style": "powerline",
 					"type": "root"
 				},
 				{
 					"background": "lightYellow",
 					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"style": "powerline",
 					"template": " \uf252 {{ .FormattedMs }} ",
 					"type": "executiontime"
@@ -150,8 +142,7 @@
 						"{{ if gt .Code 0 }}lightRed{{ end }}"
 					],
 					"foreground": "lightWhite",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0ba",
+					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"always_enabled": true
 					},
@@ -165,7 +156,6 @@
 					"properties": {
 						"time_format": "3:04 PM"
 					},
-					"invert_powerline": true,
 					"style": "diamond",
 					"template": " \uf017 {{ .CurrentDate | date .Format }} ",
 					"trailing_diamond": "\ue0bc",
