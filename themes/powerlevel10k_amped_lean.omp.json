@@ -51,7 +51,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+					"template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
 					"type": "node"
 				},
 				{
