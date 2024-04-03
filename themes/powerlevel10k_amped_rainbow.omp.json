@@ -90,8 +90,8 @@
 					"type": "go"
 				},
 				{
-					"background": "lightRed",
-					"foreground": "black",
+					"background": "lightBlue",
+					"foreground": "lightWhite",
 					"invert_powerline": true,
 					"powerline_symbol": "\ue0b2",
 					"properties": {

@@ -76,7 +76,7 @@
 					"type": "go"
 				},
 				{
-					"foreground": "lightRed",
+					"foreground": "lightBlue",
 					"properties": {
 						"fetch_version": true
 					},

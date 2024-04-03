@@ -87,8 +87,8 @@
 					"type": "go"
 				},
 				{
-					"background": "lightRed",
-					"foreground": "black",
+					"background": "lightBlue",
+					"foreground": "lightWhite",
 					"powerline_symbol": "\ue0bc",
 					"properties": {
 						"fetch_version": true
