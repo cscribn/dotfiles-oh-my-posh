@@ -9,7 +9,6 @@
 					"foreground": "lightWhite",
 					"leading_diamond": "\ue0b2",
 					"style": "diamond",
-					"template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
 					"type": "os"
 				},
 				{
@@ -42,7 +41,6 @@
 						"fetch_upstream_icon": true
 					},
 					"style": "powerline",
-					"template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
 					"type": "git"
 				}
 			],
@@ -97,7 +95,7 @@
 						"fetch_virtual_env": false
 					},
 					"style": "powerline",
-					"template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+					"template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
 					"type": "python"
 				},
 				{
