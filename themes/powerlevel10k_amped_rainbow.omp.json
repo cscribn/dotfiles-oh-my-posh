@@ -89,6 +89,18 @@
 					"type": "go"
 				},
 				{
+					"background": "lightRed",
+					"foreground": "black",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b2",
+					"properties": {
+						"fetch_version": true
+					},
+					"style": "powerline",
+					"template": " \uE738 {{ .Full }} ",
+					"type": "java"
+				},
+				{
 					"background": "lightGreen",
 					"foreground": "black",
 					"invert_powerline": true,

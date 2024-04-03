@@ -75,6 +75,15 @@
 					"type": "go"
 				},
 				{
+					"foreground": "lightRed",
+					"properties": {
+						"fetch_version": true
+					},
+					"style": "plain",
+					"template": " \uE738 {{ .Full }} ",
+					"type": "java"
+				},
+				{
 					"foreground": "lightGreen",
 					"properties": {
 						"fetch_version": true
