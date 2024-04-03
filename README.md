@@ -12,5 +12,5 @@ Amped up themes with the following improvements:
 * Azfunc removed
 * US time format
 * Prompts that match the shell used
-  * \> for pwsh; % for zsh; $ otherwise
+  * \\ for cmd; \> for pwsh; % for zsh; $ otherwise
 * Other minor formatting
