@@ -44,13 +44,26 @@
 			"alignment": "right",
 			"segments": [
 				{
-					"foreground": "lightGreen",
+					"foreground_templates": [
+						"{{if contains \"default\" .Profile}}lightYellow{{end}}",
+						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
+					],
+					"foreground": "darkGray",
+					"properties": {
+						"display_default": false
+					},
+					"style": "plain",
+					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
+					"type": "aws"
+				},
+				{
+					"foreground": "lightBlue",
 					"properties": {
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-					"type": "node"
+					"template": " \uE77F {{ .Full }} ",
+					"type": "dotnet"
 				},
 				{
 					"foreground": "lightCyan",
@@ -62,13 +75,13 @@
 					"type": "go"
 				},
 				{
-					"foreground": "lightBlue",
+					"foreground": "lightGreen",
 					"properties": {
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " \uE77F {{ .Full }} ",
-					"type": "dotnet"
+					"template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+					"type": "node"
 				},
 				{
 					"foreground": "lightYellow",
@@ -88,19 +101,6 @@
 					"style": "plain",
 					"template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "ruby"
-				},
-				{
-					"foreground_templates": [
-						"{{if contains \"default\" .Profile}}lightYellow{{end}}",
-						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
-					],
-					"foreground": "darkGray",
-					"properties": {
-						"display_default": false
-					},
-					"style": "plain",
-					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
-					"type": "aws"
 				},
 				{
 					"foreground": "lightYellow",

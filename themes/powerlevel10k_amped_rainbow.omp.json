@@ -50,16 +50,31 @@
 			"alignment": "right",
 			"segments": [
 				{
-					"background": "lightGreen",
+					"background_templates": [
+						"{{if contains \"default\" .Profile}}lightYellow{{end}}",
+						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
+					],
 					"foreground": "black",
+					"invert_powerline": true,
+					"powerline_symbol": "\ue0b2",
+					"properties": {
+						"display_default": false
+					},
+					"style": "powerline",
+					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
+					"type": "aws"
+				},
+				{
+					"background": "lightBlue",
+					"foreground": "lightWhite",
 					"invert_powerline": true,
 					"powerline_symbol": "\ue0b2",
 					"properties": {
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-					"type": "node"
+					"template": " \uE77F {{ .Full }} ",
+					"type": "dotnet"
 				},
 				{
 					"background": "lightCyan",
@@ -74,16 +89,16 @@
 					"type": "go"
 				},
 				{
-					"background": "lightBlue",
-					"foreground": "lightWhite",
+					"background": "lightGreen",
+					"foreground": "black",
 					"invert_powerline": true,
 					"powerline_symbol": "\ue0b2",
 					"properties": {
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " \uE77F {{ .Full }} ",
-					"type": "dotnet"
+					"template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+					"type": "node"
 				},
 				{
 					"background": "lightYellow",
@@ -109,21 +124,6 @@
 					"style": "powerline",
 					"template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
 					"type": "ruby"
-				},
-				{
-					"background_templates": [
-						"{{if contains \"default\" .Profile}}lightYellow{{end}}",
-						"{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
-					],
-					"foreground": "black",
-					"invert_powerline": true,
-					"powerline_symbol": "\ue0b2",
-					"properties": {
-						"display_default": false
-					},
-					"style": "powerline",
-					"template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
-					"type": "aws"
 				},
 				{
 					"background": "lightYellow",
