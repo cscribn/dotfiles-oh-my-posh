@@ -72,7 +72,7 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " \uE77F {{ .Full }} ",
+					"template": " \ue77F {{ .Full }} ",
 					"type": "dotnet"
 				},
 				{
@@ -94,7 +94,7 @@
 						"fetch_version": true
 					},
 					"style": "powerline",
-					"template": " \uE738 {{ .Full }} ",
+					"template": " \ue738 {{ .Full }} ",
 					"type": "java"
 				},
 				{

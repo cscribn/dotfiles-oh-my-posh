@@ -63,7 +63,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " \uE77F {{ .Full }} ",
+					"template": " \ue77F {{ .Full }} ",
 					"type": "dotnet"
 				},
 				{
@@ -81,7 +81,7 @@
 						"fetch_version": true
 					},
 					"style": "plain",
-					"template": " \uE738 {{ .Full }} ",
+					"template": " \ue738 {{ .Full }} ",
 					"type": "java"
 				},
 				{
