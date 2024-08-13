@@ -1,4 +1,4 @@
-# config-oh-my-posh
+# dotfiles-oh-my-posh
 
 ## themes/\*\_amped\_\*.omp.json
 
