@@ -199,6 +199,6 @@
 			"type": "prompt"
 		}
 	],
-	"console_title_template": "{{ .Shell }} in {{ .Folder }}",
+	"console_title_template": "{{ if .Env.SSH_CONNECTION }}{{ .HostName }}: {{ end }}{{ .Shell }} in {{ .Folder }}",
 	"version": 2
 }
