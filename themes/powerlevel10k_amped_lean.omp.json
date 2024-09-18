@@ -161,5 +161,6 @@
 			"type": "prompt"
 		}
 	],
+	"console_title_template": "{{ .Shell }} in {{ .Folder }}",
 	"version": 2
 }
