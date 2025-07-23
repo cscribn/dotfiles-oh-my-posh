@@ -50,13 +50,7 @@
             "{{ if gt .Ahead 0 }}lightCyan{{ end }}",
             "{{ if gt .Behind 0 }}lightGreen{{ end }}"
           ]
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
+        },
         {
           "properties": {
             "cache_duration": "none",
@@ -143,7 +137,15 @@
           "powerline_symbol": "\ue0bc",
           "background": "lightRed",
           "type": "ruby",
-          "style": "powerline"
+          "style": "powerline",
+          "invert_powerline": true
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "black",
+          "background": "transparent",
+          "template": "\u200b"
         },
         {
           "properties": {

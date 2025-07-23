@@ -44,13 +44,7 @@
             "{{ if gt .Ahead 0 }}lightCyan{{ end }}",
             "{{ if gt .Behind 0 }}lightGreen{{ end }}"
           ]
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
+        },
         {
           "properties": {
             "cache_duration": "none",
@@ -125,6 +119,13 @@
           "foreground": "lightRed",
           "type": "ruby",
           "style": "plain"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "black",
+          "background": "transparent",
+          "template": "\u200b\u200b"
         },
         {
           "properties": {
