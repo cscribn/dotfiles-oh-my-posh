@@ -41,7 +41,6 @@
           "properties": {
             "branch_icon": "\uf126 ",
             "cache_duration": "none",
-            "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
