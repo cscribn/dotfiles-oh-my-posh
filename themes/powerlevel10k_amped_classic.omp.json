@@ -17,6 +17,13 @@
           "style": "powerline"
         },
         {
+          "foreground": "lightWhite",
+          "background": "darkGray",
+          "template": " {{ .UserName }} ",
+          "type": "session",
+          "style": "powerline"
+        },
+        {
           "properties": {
             "cache_duration": "none",
             "folder_separator_template": "{{ if or (eq .Shell \"bash\") (eq .Shell \"zsh\") }}/{{end}}",
@@ -38,7 +45,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "foreground": "black",
           "powerline_symbol": "\ue0bc",
           "background": "lightGreen",
