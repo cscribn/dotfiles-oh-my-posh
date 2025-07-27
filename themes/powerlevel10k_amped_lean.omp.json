@@ -16,7 +16,7 @@
         },
         {
           "foreground": "darkGray",
-          "template": " {{ .UserName }} ",
+          "template": "{{ .UserName }} ",
           "type": "session",
           "style": "plain"
         },

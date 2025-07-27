@@ -19,7 +19,7 @@
         {
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": " {{ .UserName }} ",
+          "template": "{{ .UserName }} ",
           "type": "session",
           "style": "powerline"
         },
