@@ -145,14 +145,13 @@
           "type": "ruby",
           "style": "powerline",
           "invert_powerline": true
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "black",
-          "background": "transparent",
-          "template": "\u200b"
-        },
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
         {
           "properties": {
             "cache_duration": "none"

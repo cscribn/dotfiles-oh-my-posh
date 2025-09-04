@@ -124,14 +124,13 @@
           "foreground": "lightRed",
           "type": "ruby",
           "style": "plain"
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "black",
-          "background": "transparent",
-          "template": "\u200b\u200b"
-        },
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
         {
           "properties": {
             "cache_duration": "none"
