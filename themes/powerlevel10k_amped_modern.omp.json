@@ -60,21 +60,6 @@
         {
           "properties": {
             "cache_duration": "none",
-            "display_default": false
-          },
-          "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
-          "foreground": "black",
-          "powerline_symbol": "\ue0b4",
-          "type": "aws",
-          "style": "powerline",
-          "background_templates": [
-            "{{if contains \"default\" .Profile}}lightYellow{{end}}",
-            "{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
-          ]
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
             "fetch_version": true
           },
           "template": " \ue77f {{ .Full }} ",
@@ -82,18 +67,6 @@
           "powerline_symbol": "\ue0b4",
           "background": "lightBlue",
           "type": "dotnet",
-          "style": "powerline"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_version": true
-          },
-          "template": " \ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "foreground": "black",
-          "powerline_symbol": "\ue0b4",
-          "background": "lightCyan",
-          "type": "go",
           "style": "powerline"
         },
         {
@@ -132,19 +105,6 @@
           "background": "lightYellow",
           "type": "python",
           "style": "powerline"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_version": true
-          },
-          "template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b6",
-          "background": "lightRed",
-          "type": "ruby",
-          "style": "powerline",
-          "invert_powerline": true
         }
       ]
     },

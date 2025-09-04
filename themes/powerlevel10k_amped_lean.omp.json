@@ -53,37 +53,13 @@
         {
           "properties": {
             "cache_duration": "none",
-            "display_default": false
-          },
-          "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
-          "foreground": "darkGray",
-          "type": "aws",
-          "style": "plain",
-          "foreground_templates": [
-            "{{if contains \"default\" .Profile}}lightYellow{{end}}",
-            "{{if contains \"jan\" .Profile}}lightMagenta{{end}}"
-          ]
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
             "fetch_version": true
           },
           "template": " \ue77f {{ .Full }} ",
           "foreground": "lightBlue",
           "type": "dotnet",
           "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_version": true
-          },
-          "template": " \ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "foreground": "lightCyan",
-          "type": "go",
-          "style": "plain"
-        },
+        }
         {
           "properties": {
             "cache_duration": "none",
@@ -113,16 +89,6 @@
           "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "foreground": "lightYellow",
           "type": "python",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_version": true
-          },
-          "template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "foreground": "lightRed",
-          "type": "ruby",
           "style": "plain"
         }
       ]
