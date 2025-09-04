@@ -151,7 +151,7 @@
           "style": "plain",
           "foreground": "black",
           "background": "transparent",
-          "template": "\u200b"
+          "template": "\u2060"
         },
         {
           "properties": {
