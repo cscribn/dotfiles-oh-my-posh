@@ -59,7 +59,7 @@
           "foreground": "lightBlue",
           "type": "dotnet",
           "style": "plain"
-        }
+        },
         {
           "properties": {
             "cache_duration": "none",
