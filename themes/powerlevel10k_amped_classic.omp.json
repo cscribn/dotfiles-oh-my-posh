@@ -7,6 +7,9 @@
       "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
           "foreground": "lightWhite",
           "powerline_symbol": "\ue0bc",
           "background": "darkGray",
@@ -21,7 +24,8 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "folder_separator_template": "{{ if or (eq .Shell \"bash\") (eq .Shell \"zsh\") }}/{{end}}",
             "max_depth": 2,
             "style": "agnoster_short"
@@ -34,8 +38,9 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
             "branch_icon": "\uf126 ",
+            "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
@@ -53,7 +58,8 @@
           ]
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "fetch_version": true
           },
           "template": " \ue77f {{ .Full }} ",
@@ -64,7 +70,8 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "fetch_version": true
           },
           "template": " \ue738 {{ .Full }} ",
@@ -75,7 +82,8 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "fetch_version": true
           },
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
@@ -86,7 +94,8 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "display_mode": "files",
             "fetch_virtual_env": false
           },
@@ -104,6 +113,9 @@
       "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
           "foreground": "black",
           "powerline_symbol": "\ue0bc",
           "background": "lightYellow",
@@ -111,6 +123,9 @@
           "style": "powerline"
         },
         {
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": " \uf252 {{ .FormattedMs }} ",
           "foreground": "black",
           "powerline_symbol": "\ue0bc",
@@ -119,8 +134,9 @@
           "style": "powerline"
         },
         {
-          "options": {
-            "always_enabled": true
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
           },
           "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✔{{ end }} ",
           "foreground": "lightWhite",
@@ -133,7 +149,8 @@
           ]
         },
         {
-          "options": {
+          "properties": {
+            "cache_duration": "none",
             "time_format": "3:04 PM"
           },
           "trailing_diamond": "\ue0bc",
@@ -150,6 +167,9 @@
       "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{ if eq .Shell \"cmd\" }}\\{{ else if eq .Shell \"pwsh\" }}❯{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
           "foreground": "lightMagenta",
           "type": "text",
