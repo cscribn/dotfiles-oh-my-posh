@@ -10,18 +10,25 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b2",
           "foreground": "lightWhite",
           "background": "darkGray",
+          "template": "[ {{ .Icon }}",
           "type": "os",
-          "style": "diamond"
+          "style": "plain",
+          "properties": {
+            "macos": "🍎",
+            "linux": "🐧",
+            "windows": "🪟",
+            "raspbian": "🍓",
+            "ubuntu": "🟠"
+          }
         },
         {
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": "{{ .UserName }} ",
+          "template": " {{ .UserName }} ]",
           "type": "session",
-          "style": "diamond"
+          "style": "plain"
         },
         {
           "properties": {
@@ -30,26 +37,24 @@
             "max_depth": 2,
             "style": "agnoster_short"
           },
-          "template": " \uf07c {{ .Path }} ",
+          "template": " 🗀  {{ .Path }} ]",
           "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b0",
           "background": "lightBlue",
           "type": "path",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
-            "branch_icon": "\uf126 ",
+            "branch_icon": "⌥ ",
             "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} ]",
           "foreground": "black",
-          "powerline_symbol": "\ue0b0",
           "background": "lightGreen",
           "type": "git",
-          "style": "powerline",
+          "style": "plain",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}lightYellow{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}lightRed{{ end }}",
@@ -62,36 +67,33 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue77f {{ .Full }} ",
+          "template": " 🟣 {{ .Full }} ]",
           "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b0",
           "background": "lightBlue",
           "type": "dotnet",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue738 {{ .Full }} ",
+          "template": " ☕ {{ .Full }} ]",
           "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b0",
           "background": "lightBlue",
           "type": "java",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ]",
           "foreground": "black",
-          "powerline_symbol": "\ue0b0",
           "background": "lightGreen",
           "type": "node",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
@@ -99,51 +101,43 @@
             "display_mode": "files",
             "fetch_virtual_env": false
           },
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ]",
           "foreground": "black",
-          "powerline_symbol": "\ue0b0",
           "background": "lightYellow",
           "type": "python",
-          "style": "powerline"
-        }
-      ]
+          "style": "plain"
     },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
         {
           "properties": {
             "cache_duration": "none"
           },
+          "template": "]{{ if .Root }} ϟ ]{{ end }}",
           "foreground": "black",
-          "powerline_symbol": "\ue0b0",
+          "leading_powerline_symbol": " ",
           "background": "lightYellow",
-          "type": "root",
+          "type": "text",
           "style": "powerline"
         },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \uf252 {{ .FormattedMs }} ",
+          "template": " ⧖ {{ .FormattedMs }} ]",
           "foreground": "black",
-          "powerline_symbol": "\ue0b0",
           "background": "lightYellow",
           "type": "executiontime",
-          "style": "powerline"
+          "style": "plain"
         },
         {
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✔{{ end }} ",
+          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} ]",
           "foreground": "lightWhite",
-          "powerline_symbol": "\ue0b0",
           "background": "darkGray",
           "type": "status",
-          "style": "powerline",
+          "style": "plain",
           "background_templates": [
             "{{ if gt .Code 0 }}lightRed{{ end }}"
           ]
@@ -153,12 +147,11 @@
             "cache_duration": "none",
             "time_format": "3:04 PM"
           },
-          "trailing_diamond": "\ue0b0",
-          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "template": " ◷ {{ .CurrentDate | date .Format }} ]",
           "foreground": "lightWhite",
           "background": "lightMagenta",
           "type": "time",
-          "style": "diamond"
+          "style": "plain"
         }
       ]
     },
@@ -170,7 +163,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if eq .Shell \"cmd\" }}\\{{ else if eq .Shell \"pwsh\" }}❯{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
+          "template": "{{ if eq .Shell \"cmd\" }}\\{{ else if eq .Shell \"pwsh\" }}>{{ else if eq .Shell \"zsh\" }}%{{ else }}#{{ end }} ",
           "foreground": "lightMagenta",
           "type": "text",
           "style": "plain"

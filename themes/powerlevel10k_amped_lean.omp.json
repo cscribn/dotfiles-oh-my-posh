@@ -11,12 +11,20 @@
             "cache_duration": "none"
           },
           "foreground": "darkGray",
+"template": "{{ .Icon }}",
           "type": "os",
-          "style": "plain"
+          "style": "plain",
+          "properties": {
+            "macos": "🍎",
+            "linux": "🐧",
+            "windows": "🪟",
+            "raspbian": "🍓",
+            "ubuntu": "🟠"
+          }
         },
         {
           "foreground": "darkGray",
-          "template": "{{ .UserName }} ",
+          "template": " {{ .UserName }} ",
           "type": "session",
           "style": "plain"
         },
@@ -27,19 +35,19 @@
             "max_depth": 2,
             "style": "agnoster_short"
           },
-          "template": " \uf07c {{ .Path }} ",
+          "template": " 🗀  {{ .Path }} ",
           "foreground": "lightBlue",
           "type": "path",
           "style": "plain"
         },
         {
           "properties": {
-            "branch_icon": "\uf126 ",
+            "branch_icon": "⌥ ",
             "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} ",
           "foreground": "lightGreen",
           "type": "git",
           "style": "plain",
@@ -55,7 +63,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue77f {{ .Full }} ",
+          "template": " 🟣 {{ .Full }} ",
           "foreground": "lightBlue",
           "type": "dotnet",
           "style": "plain"
@@ -65,7 +73,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue738 {{ .Full }} ",
+          "template": " ☕ {{ .Full }} ",
           "foreground": "lightBlue",
           "type": "java",
           "style": "plain"
@@ -75,7 +83,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "foreground": "lightGreen",
           "type": "node",
           "style": "plain"
@@ -86,30 +94,25 @@
             "display_mode": "files",
             "fetch_virtual_env": false
           },
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "foreground": "lightYellow",
           "type": "python",
-          "style": "plain"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "foreground": "lightYellow",
-          "type": "root",
           "style": "plain"
         },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \uf252 {{ .FormattedMs }} ",
+          "template": " {{ if .Root }}ϟ {{ end }}",
+          "foreground": "lightYellow",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " ⧖ {{ .FormattedMs }} ",
           "foreground": "lightYellow",
           "type": "executiontime",
           "style": "plain"
@@ -119,7 +122,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✔{{ end }} ",
+          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} ",
           "foreground": "darkGray",
           "type": "status",
           "style": "plain",
@@ -132,7 +135,7 @@
             "cache_duration": "none",
             "time_format": "3:04 PM"
           },
-          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "template": " ◷ {{ .CurrentDate | date .Format }} ",
           "foreground": "lightMagenta",
           "type": "time",
           "style": "plain"
@@ -147,7 +150,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if eq .Shell \"cmd\" }}\\{{ else if eq .Shell \"pwsh\" }}❯{{ else if eq .Shell \"zsh\" }}\uff05{{ else }}\uff04{{ end }} ",
+          "template": "{{ if eq .Shell \"cmd\" }}\\{{ else if eq .Shell \"pwsh\" }}>{{ else if eq .Shell \"zsh\" }}%{{ else }}#{{ end }} ",
           "foreground": "lightMagenta",
           "type": "text",
           "style": "plain"
