@@ -37,7 +37,7 @@
             "max_depth": 2,
             "style": "agnoster_short"
           },
-          "template": " 🗀  {{ .Path }} )",
+          "template": " 📁  {{ .Path }} )",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "path",
