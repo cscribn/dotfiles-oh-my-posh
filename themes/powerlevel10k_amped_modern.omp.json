@@ -111,10 +111,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "){{ if .Root }} ϟ ){{ end }}",
-          "foreground": "black",
+          "template": "<white,darkGray>)</>{{ if .Root }}<black,lightYellow> ϟ )</>{{ end }}",
           "leading_powerline_symbol": " ",
-          "background": "lightYellow",
           "type": "text",
           "style": "powerline"
         },

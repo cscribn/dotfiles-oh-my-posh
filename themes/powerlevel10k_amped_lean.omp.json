@@ -103,8 +103,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " {{ if .Root }}ϟ {{ end }}",
-          "foreground": "lightYellow",
+          "template": " {{ if .Root }}<lightYellow> ϟ </>{{ end }}",
           "type": "text",
           "style": "plain"
         },
