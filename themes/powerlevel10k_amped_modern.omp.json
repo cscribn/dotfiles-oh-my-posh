@@ -109,13 +109,26 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "template": "{{ if or .Root (gt .Ms 0) }}<black,lightYellow>)</>{{ else }}<white,darkGray>)</>{{ end }}{{ if .Root }}<black,lightYellow> ϟ )</>{{ end }}",
+          "template": ") {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} )",
           "leading_powerline_symbol": " ",
-          "type": "executiontime",
-          "style": "powerline"
+          "foreground": "lightWhite",
+          "background": "darkGray",
+          "type": "status",
+          "style": "powerline",
+          "background_templates": [
+            "{{ if gt .Code 0 }}lightRed{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ if .Root }}<black,lightYellow> ϟ )</>{{ end }}",
+          "type": "text",
+          "style": "plain"
         },
         {
           "properties": {
@@ -126,20 +139,6 @@
           "background": "lightYellow",
           "type": "executiontime",
           "style": "plain"
-        },
-        {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
-          },
-          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} )",
-          "foreground": "lightWhite",
-          "background": "darkGray",
-          "type": "status",
-          "style": "plain",
-          "background_templates": [
-            "{{ if gt .Code 0 }}lightRed{{ end }}"
-          ]
         },
         {
           "properties": {

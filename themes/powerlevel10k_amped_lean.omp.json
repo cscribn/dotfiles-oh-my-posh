@@ -101,13 +101,26 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} ",
+          "leading_powerline_symbol": " ",
+          "foreground": "darkGray",
+          "type": "status",
+          "style": "powerline",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}lightRed{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
           },
           "template": "{{ if .Root }}<lightYellow> ϟ </>{{ end }}",
           "leading_powerline_symbol": " ",
-          "type": "executiontime",
-          "style": "powerline"
+          "type": "text",
+          "style": "plain"
         },
         {
           "properties": {
@@ -117,19 +130,6 @@
           "foreground": "lightYellow",
           "type": "executiontime",
           "style": "plain"
-        },
-        {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
-          },
-          "template": " {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} ",
-          "foreground": "darkGray",
-          "type": "status",
-          "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}lightRed{{ end }}"
-          ]
         },
         {
           "properties": {
