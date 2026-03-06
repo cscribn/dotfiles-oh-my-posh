@@ -109,11 +109,12 @@
         },
         {
           "properties": {
-            "cache_duration": "none"
+            "cache_duration": "none",
+            "always_enabled": true
           },
-          "template": "<white,darkGray>)</>{{ if .Root }}<black,lightYellow> ϟ )</>{{ end }}",
+          "template": "{{ if or .Root (gt .Ms 0) }}<black,lightYellow>)</>{{ else }}<white,darkGray>)</>{{ end }}{{ if .Root }}<black,lightYellow> ϟ )</>{{ end }}",
           "leading_powerline_symbol": " ",
-          "type": "text",
+          "type": "executiontime",
           "style": "powerline"
         },
         {
