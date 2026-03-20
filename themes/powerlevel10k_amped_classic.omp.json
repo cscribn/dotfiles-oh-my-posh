@@ -1,6 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "console_title_template": "{{ if .Env.SSH_CONNECTION }}{{ .HostName }}: {{ end }}{{ .Shell }} in {{ .Folder }}",
+  "var": {
+    "LeadingSymbol": "/",
+    "TrailingSymbol": "/"
+  },
   "blocks": [
     {
       "type": "prompt",
@@ -8,25 +12,23 @@
       "segments": [
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "foreground": "lightWhite",
-          "background": "darkGray",
-          "template": "/ {{ .Icon }}",
-          "type": "os",
-          "style": "plain",
-          "properties": {
+            "cache_duration": "none",
             "macos": "🍎",
             "linux": "🐧",
             "windows": "🪟",
             "raspbian": "🍓",
             "ubuntu": "🟠"
-          }
+          },
+          "foreground": "lightWhite",
+          "background": "darkGray",
+          "template": "{{ .Var.LeadingSymbol }} {{ .Icon }}",
+          "type": "os",
+          "style": "plain"
         },
         {
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": " {{ .UserName }} /",
+          "template": " {{ .UserName }} {{ .Var.TrailingSymbol }}",
           "type": "session",
           "style": "plain"
         },
@@ -37,7 +39,7 @@
             "max_depth": 2,
             "style": "agnoster_short"
           },
-          "template": " 📁  {{ .Path }} /",
+          "template": " 📁  {{ .Path }} {{ .Var.TrailingSymbol }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "path",
@@ -50,7 +52,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} /",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} {{ .Var.TrailingSymbol }}",
           "foreground": "black",
           "background": "lightGreen",
           "type": "git",
@@ -67,7 +69,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " 🟣 {{ .Full }} /",
+          "template": " 🟣 {{ .Full }} {{ .Var.TrailingSymbol }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "dotnet",
@@ -78,7 +80,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " ☕ {{ .Full }} /",
+          "template": " ☕ {{ .Full }} {{ .Var.TrailingSymbol }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "java",
@@ -89,7 +91,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} /",
+          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} {{ .Var.TrailingSymbol }}",
           "foreground": "black",
           "background": "lightGreen",
           "type": "node",
@@ -101,7 +103,7 @@
             "display_mode": "files",
             "fetch_virtual_env": true
           },
-          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} /",
+          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} {{ .Var.TrailingSymbol }}",
           "foreground": "black",
           "background": "lightYellow",
           "type": "python",
@@ -112,7 +114,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "/ {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} /",
+          "template": "{{ .Var.TrailingSymbol }} {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} {{ .Var.TrailingSymbol }}",
           "leading_powerline_symbol": " ",
           "foreground": "lightWhite",
           "background": "darkGray",
@@ -126,7 +128,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if .Root }}<black,lightYellow> ϟ /</>{{ end }}",
+          "template": "{{ if .Root }}<black,lightYellow> ϟ {{ .Var.TrailingSymbol }}</>{{ end }}",
           "type": "text",
           "style": "plain"
         },
@@ -134,7 +136,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " ⧖ {{ .FormattedMs }} /",
+          "template": " ⧖ {{ .FormattedMs }} {{ .Var.TrailingSymbol }}",
           "foreground": "black",
           "background": "lightYellow",
           "type": "executiontime",
@@ -145,7 +147,7 @@
             "cache_duration": "none",
             "time_format": "3:04 PM"
           },
-          "template": " ◷ {{ .CurrentDate | date .Format }} /",
+          "template": " ◷ {{ .CurrentDate | date .Format }} {{ .Var.TrailingSymbol }}",
           "foreground": "lightWhite",
           "background": "lightMagenta",
           "type": "time",

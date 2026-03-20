@@ -8,19 +8,17 @@
       "segments": [
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "foreground": "darkGray",
-"template": "{{ .Icon }}",
-          "type": "os",
-          "style": "plain",
-          "properties": {
+            "cache_duration": "none",
             "macos": "🍎",
             "linux": "🐧",
             "windows": "🪟",
             "raspbian": "🍓",
             "ubuntu": "🟠"
-          }
+          },
+          "foreground": "darkGray",
+          "template": "{{ .Icon }}",
+          "type": "os",
+          "style": "plain"
         },
         {
           "foreground": "darkGray",
