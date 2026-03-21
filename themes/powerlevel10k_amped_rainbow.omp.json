@@ -21,14 +21,14 @@
           },
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": "{{ .Var.LeadingSymbol }} {{ .Icon }}",
+          "template": "{{ if .Env.LEADING_SYMBOL }}{{ .Env.LEADING_SYMBOL }}{{ else }}{{ .Var.LeadingSymbol }}{{ end }} {{ .Icon }}",
           "type": "os",
           "style": "plain"
         },
         {
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": " {{ .UserName }} {{ .Var.TrailingSymbol }}",
+          "template": " {{ .UserName }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "type": "session",
           "style": "plain"
         },
@@ -39,7 +39,7 @@
             "max_depth": 2,
             "style": "agnoster_short"
           },
-          "template": " 📁  {{ .Path }} {{ .Var.TrailingSymbol }}",
+          "template": " 📁  {{ .Path }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "path",
@@ -52,7 +52,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} {{ .Var.TrailingSymbol }}",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "black",
           "background": "lightGreen",
           "type": "git",
@@ -69,7 +69,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " 🟣 {{ .Full }} {{ .Var.TrailingSymbol }}",
+          "template": " 🟣 {{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "dotnet",
@@ -80,7 +80,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " ☕ {{ .Full }} {{ .Var.TrailingSymbol }}",
+          "template": " ☕ {{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
           "type": "java",
@@ -91,7 +91,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} {{ .Var.TrailingSymbol }}",
+          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "black",
           "background": "lightGreen",
           "type": "node",
@@ -103,7 +103,7 @@
             "display_mode": "files",
             "fetch_virtual_env": true
           },
-          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} {{ .Var.TrailingSymbol }}",
+          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "black",
           "background": "lightYellow",
           "type": "python",
@@ -114,7 +114,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "{{ .Var.TrailingSymbol }} {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} {{ .Var.TrailingSymbol }}",
+          "template": "{{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }} {{ if gt .Code 0 }}{{  reason .Code }}{{ else }}✓{{ end }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "leading_powerline_symbol": " ",
           "foreground": "lightWhite",
           "background": "darkGray",
@@ -128,7 +128,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if .Root }}<black,lightYellow> ϟ {{ .Var.TrailingSymbol }}</>{{ end }}",
+          "template": "{{ if .Root }}<black,lightYellow> ϟ {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}</>{{ end }}",
           "type": "text",
           "style": "plain"
         },
@@ -136,7 +136,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " ⧖ {{ .FormattedMs }} {{ .Var.TrailingSymbol }}",
+          "template": " ⧖ {{ .FormattedMs }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "black",
           "background": "lightYellow",
           "type": "executiontime",
@@ -147,7 +147,7 @@
             "cache_duration": "none",
             "time_format": "3:04 PM"
           },
-          "template": " ◷ {{ .CurrentDate | date .Format }} {{ .Var.TrailingSymbol }}",
+          "template": " ◷ {{ .CurrentDate | date .Format }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "lightWhite",
           "background": "lightMagenta",
           "type": "time",
