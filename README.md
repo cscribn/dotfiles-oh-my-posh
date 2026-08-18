@@ -9,6 +9,7 @@ Amped up themes with the following improvements:
 * Nerd fonts replaced with utf-8
 * Agnoster short paths instead of full
 * Correct slashes when using Git Bash for Windows
+* Java replaced with gradle showing JVM
 * Julia replaced with dotnet
 * Azfunc removed
 * US time format

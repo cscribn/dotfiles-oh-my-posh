@@ -71,9 +71,9 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " ☕ {{ .Full }} ",
+          "template": " ☕ {{ .JVMVersion }} ",
           "foreground": "lightBlue",
-          "type": "java",
+          "type": "gradle",
           "style": "plain"
         },
         {

@@ -80,10 +80,10 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " ☕ {{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
+          "template": " ☕ {{ .JVMVersion }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "lightWhite",
           "background": "lightBlue",
-          "type": "java",
+          "type": "gradle",
           "style": "plain"
         },
         {
