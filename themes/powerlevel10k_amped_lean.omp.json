@@ -81,7 +81,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " ⬡ {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "foreground": "lightGreen",
           "type": "node",
           "style": "plain"
