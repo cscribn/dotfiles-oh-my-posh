@@ -91,7 +91,7 @@
             "cache_duration": "none",
             "fetch_version": true
           },
-          "template": " 🟢 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
+          "template": " ⬡ {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "foreground": "black",
           "background": "lightGreen",
           "type": "node",
