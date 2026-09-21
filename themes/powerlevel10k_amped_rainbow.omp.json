@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "console_title_template": "{{ if .Env.SSH_CONNECTION }}{{ .HostName }}: {{ end }}{{ .Shell }} in {{ .Folder }}",
   "var": {
-    "LeadingSymbol": "{",
-    "TrailingSymbol": "}"
+    "LeadingSymbol": "[",
+    "TrailingSymbol": "]"
   },
   "blocks": [
     {
