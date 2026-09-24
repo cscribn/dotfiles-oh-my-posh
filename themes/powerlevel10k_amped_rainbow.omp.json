@@ -28,7 +28,7 @@
         {
           "foreground": "lightWhite",
           "background": "darkGray",
-          "template": " {{ .UserName }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
+          "template": "  {{ .UserName }} {{ if .Env.TRAILING_SYMBOL }}{{ .Env.TRAILING_SYMBOL }}{{ else }}{{ .Var.TrailingSymbol }}{{ end }}",
           "type": "session",
           "style": "plain"
         },
